@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Noe Display';
+    src: url('./NoeDisplay-Bold.woff2') format('woff2'),
+        url('./NoeDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noe Display';
+    src: url('./NoeDisplay-RegularItalic.woff2') format('woff2'),
+        url('./NoeDisplay-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Noe Display';
+    src: url('./NoeDisplay-Regular.woff2') format('woff2'),
+        url('./NoeDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noe Display';
+    src: url('./NoeDisplay-BoldItalic.woff2') format('woff2'),
+        url('./NoeDisplay-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+

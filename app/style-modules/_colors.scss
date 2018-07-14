@@ -1,0 +1,16 @@
+@import './utilities';
+
+$colors: (
+  ink: (
+    base: #000,
+    light: #222,
+  ),
+  sky: (
+    base: blue,
+    light: lightblue,
+  )
+);
+
+@function color($option, $shade: base) {
+  @return safe-map-get('shade', safe-map-get('color', $colors, $option), $shade);
+}

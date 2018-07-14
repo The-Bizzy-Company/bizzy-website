@@ -1,0 +1,10 @@
+@import './utilities';
+
+$spacing: (
+  base: 1rem,
+  loose: 1.25rem
+);
+
+@function spacing($option: base) {
+  @return safe-map-get('spacing', $spacing, $option);
+}

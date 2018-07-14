@@ -1,6 +1,16 @@
 import * as React from 'react';
 import {render} from 'react-dom';
 
-import Button from 'Components/Button';
+import App from 'Components/App';
+import Heading from 'Components/Heading';
+import Page from 'Components/Page';
 
-render(<Button>Click me!</Button>, document.getElementById('app'));
+render(
+  <App>
+    <Page>
+      <Heading>Yeey!</Heading>
+      yeey!
+    </Page>
+  </App>,
+  document.getElementById('app'),
+);
