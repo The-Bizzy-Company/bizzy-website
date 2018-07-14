@@ -5,6 +5,7 @@ const {TsConfigPathsPlugin} = require('awesome-typescript-loader');
 const PATHS = {
   app: `${__dirname}/app`,
   public: `${__dirname}/public`,
+  rootPublic: '/public',
 };
 
 module.exports = {
@@ -14,7 +15,7 @@ module.exports = {
     port: 9000,
     compress: true,
     historyApiFallback: {
-      rewrites: [{from: /^\/[^\.]+$/, to: '/index.html'}],
+      rewrites: [{from: /^\/[^.]+$/, to: '/index.html'}],
     },
   },
   devtool: 'cheap-module-eval-source-map',
@@ -34,11 +35,12 @@ module.exports = {
   output: {
     path: PATHS.public,
     filename: 'bundle.js',
-    publicPath: '/',
+    publicPath: PATHS.rootPublic,
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'index-template.html',
+      filename: '../index.html',
     }),
   ],
   module: {
@@ -47,7 +49,7 @@ module.exports = {
         test: /\.(jpe|jpg|woff|woff2|eot|ttf|svg|otf)(\?.*$|$)/,
         loader: 'file-loader',
         options: {
-          name: '[path][name].[ext]',
+          name: `${PATHS.rootPublic}/[path][name].[ext]`,
         },
       },
       {
