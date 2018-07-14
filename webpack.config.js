@@ -11,7 +11,7 @@ const PATHS = {
 module.exports = {
   mode: process.env.PRODUCTION ? 'production' : 'development',
   devServer: {
-    contentBase: PATHS.public,
+    contentBase: __dirname,
     port: 9000,
     compress: true,
     historyApiFallback: {
@@ -51,7 +51,7 @@ module.exports = {
         test: /\.(jpe|jpg|woff|woff2|eot|ttf|svg|otf)(\?.*$|$)/,
         loader: 'file-loader',
         options: {
-          name: `${PATHS.rootPublic}/[path][name].[ext]`,
+          name: '[path][name].[ext]',
         },
       },
       {

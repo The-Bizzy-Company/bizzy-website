@@ -1,5 +1,7 @@
+@import 'all';
+
 .Layout {
-  font: 300 16px 'Brandon Text';
+  font: weight(body) size(body) family(body);
 }
 
 :global body {

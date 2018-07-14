@@ -1,0 +1,10 @@
+@import 'all';
+
+.Stack {
+  overflow: hidden;
+}
+
+.Item {
+  float: left;
+  margin-right: spacing();
+}

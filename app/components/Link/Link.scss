@@ -1,0 +1,10 @@
+@import 'all';
+
+.Link {
+  color: color(grey, light);
+  text-decoration: none;
+
+  &:hover {
+    color: color(base);
+  }
+}

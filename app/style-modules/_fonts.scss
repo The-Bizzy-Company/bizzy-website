@@ -1,0 +1,35 @@
+$sizes: (
+  body: (
+    base: 16px,
+    big: 1.25rem,
+  ),
+  heading: (
+    base: 3rem,
+  ),
+);
+
+$weights: (
+  body: (
+    base: 300,
+  ),
+  heading: (
+    base: 700,
+  ),
+);
+
+$families: (
+  body: 'Brandon Text',
+  heading: 'Noe Display',
+);
+
+@function size($category, $size: base) {
+  @return safe-map-get('size', safe-map-get('category', $sizes, $category), $size);
+}
+
+@function weight($category, $weight: base) {
+  @return safe-map-get('weight', safe-map-get('category', $weights, $category), $weight);
+}
+
+@function family($category) {
+  @return safe-map-get('family', $families, $category);
+}

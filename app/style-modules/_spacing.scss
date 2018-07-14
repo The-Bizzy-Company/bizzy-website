@@ -1,8 +1,6 @@
-@import './utilities';
-
 $spacing: (
   base: 1rem,
-  loose: 1.25rem
+  loose: 1.5rem
 );
 
 @function spacing($option: base) {

@@ -1,13 +1,14 @@
-@import './utilities';
-
 $colors: (
-  ink: (
-    base: #000,
-    light: #222,
+  accent: (
+    base: #4545C4
   ),
-  sky: (
-    base: blue,
-    light: lightblue,
+  base: (
+    base: #2E4981,
+    darker: #29296D,
+  ),
+  grey: (
+    light: #696969,
+    lighter: #D8DCE5,
   )
 );
 
