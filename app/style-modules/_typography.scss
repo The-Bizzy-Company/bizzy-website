@@ -18,6 +18,7 @@ $sizes: (
 $weights: (
   body: (
     base: 300,
+    bold: 400,
   ),
   heading: (
     base: 700,
@@ -27,6 +28,11 @@ $weights: (
 $families: (
   body: 'Brandon Text',
   heading: 'Noe Display',
+);
+
+$line-heights: (
+  body: 1.5em,
+  heading: 1.3em,
 );
 
 @function size($category, $size: base) {
@@ -39,4 +45,12 @@ $families: (
 
 @function family($category) {
   @return safe-map-get('family', $families, $category);
+}
+
+@function line-height($category) {
+  @return safe-map-get('line-height', $line-heights, $category);
+}
+
+@mixin main-font {
+  font: weight(body) size(body) family(body);
 }

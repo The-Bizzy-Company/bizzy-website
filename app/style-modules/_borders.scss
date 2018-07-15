@@ -1,0 +1,16 @@
+$border-width: (
+  base: rem(1px),
+  thick: rem(2px),
+);
+
+$border-radius: (
+  base: rem(3px)
+);
+
+@function border-width($width: base) {
+  @return safe-map-get('border width', $border-width, $width);
+}
+
+@function border-radius($radius: base) {
+  @return safe-map-get('border radius', $border-radius, $radius);
+}

@@ -1,0 +1,7 @@
+$transition-durations: (
+  base: .3s,
+);
+
+@function duration($speed: base) {
+  @return safe-map-get('transition duration', $transition-durations, $speed);
+}

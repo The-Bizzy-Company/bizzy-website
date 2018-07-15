@@ -1,0 +1,37 @@
+.Button {
+  color: color(white);
+  background: color(accent);
+  text-decoration: none;
+  transition: background duration() ease;
+  border: none;
+
+  @include main-font;
+  font-weight: weight(body, bold);
+  padding: spacing() spacing(loose);
+  padding-bottom: spacing() + 0.1rem;
+  border-radius: border-radius();
+
+  cursor: pointer;
+  display: inline-block;
+
+  &:hover {
+    background: color(accent, dark);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.ButtonOutlined {
+  background: transparent;
+  color: color(accent);
+  border: solid border-width(thick) color(accent);
+  padding: spacing(tight) spacing(loose);
+
+  &:hover {
+    color: color(accent, dark);
+    border-color: color(accent, dark);
+    background: transparent;
+  }
+}

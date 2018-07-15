@@ -1,5 +1,6 @@
 .Layout {
-  font: weight(body) size(body) family(body);
+  @include main-font;
+  line-height: line-height(body);
 }
 
 :global body {

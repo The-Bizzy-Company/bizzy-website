@@ -1,8 +1,28 @@
 .Stack {
   overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.StackVertical {
+  display: block;
 }
 
 .Item {
   float: left;
   margin-right: spacing();
+
+  &:last-child {
+    margin-right: 0 !important;
+  }
+
+  .StackSpacedLoose & {
+    margin-right: spacing(loose);
+  }
+
+  .StackVertical & {
+    float: none;
+    margin-right: 0;
+    margin-bottom: spacing(tight);
+  }
 }
