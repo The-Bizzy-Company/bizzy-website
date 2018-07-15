@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {TsConfigPathsPlugin} = require('awesome-typescript-loader');
 
@@ -71,6 +72,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
+              data: fs.readFileSync('./app/style-modules/_all.scss'),
               includePaths: ['./app/style-modules'],
             },
           },
