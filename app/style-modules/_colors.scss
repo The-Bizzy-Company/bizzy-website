@@ -1,15 +1,28 @@
 $colors: (
-  accent: (
-    base: #4545C4,
-    dark: darken(#4545C4, 10%),
-  ),
   base: (
-    base: #2E4981,
-    dark: #29296D,
+
+  ),
+  blue: (
+    darker: #4545C4,
+    dark: #3360BF,
+    regular: #5F94E0,
+    light: #CCEAFB,
+    lighter: #E5F4FB
+  ),
+  brown: (
+    dark: #873E25,
+    regular: #E28861,
+    light: #EDA27C
+  ),
+  green: (
+    dark: #20CEB1,
+    regular: #1BE0BF,
+    light: #40F4D5
   ),
   grey: (
-    light: #696969,
-    lighter: #D8DCE5,
+    regular: #D8DCE5,
+    light: #EFF6FA,
+    lighter: #F5F7FB,
   ),
   white: (
     base: #ffffff,
