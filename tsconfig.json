@@ -9,6 +9,7 @@
     "jsx": "react",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
     "target": "es5",
     "lib": ["es6", "dom"],
     "moduleResolution": "node",
@@ -16,7 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "Components/*": ["app/components/*"],
-      "Utilities/*": ["app/utilities/*"]
+      "Utilities/*": ["app/utilities/*"],
+      "Assets/*": ["app/assets/*"]
     }
   },
   "exclude": ["node_modules"]

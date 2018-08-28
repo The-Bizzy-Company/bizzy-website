@@ -1,11 +1,61 @@
+@mixin wave($color, $height, $side) {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  background-color: $color;
+  height: $height;
+  width: 100%;
+  z-index: 100;
+
+  @if($side == 'top') {
+    top: 0;
+    right: 0;
+    border-radius: 50%/#{$height} #{$height} 0 0;
+    transform: translateY(-50%) translateX(43.5%);
+  }
+
+  @if ($side == 'bottom') {
+    bottom: 0;
+    left: 0;
+    border-radius: 50%/#{$height} #{$height} 0 0;
+    transform: translateY(50%) translateX(-43.5%) rotate(180deg);
+  }
+}
+
 .Section {
+  position: relative;
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;
   padding: 200px 0;
+  overflow: visible;
+
+  &.SectionTopWave {
+    &:before {
+      @include wave(white, 80px, 'top');
+    }
+  }
+
+  &.SectionBottomWave {
+    &:after {
+      @include wave(white, 80px, 'bottom');
+    }
+  }
 }
 
 .SectionBlue {
   background-color: color(blue, lightest);
+
+  &.SectionTopWave {
+    &:before {
+      @include wave(color(blue, lightest), 80px, 'top');
+    }
+  }
+
+  &.SectionBottomWave {
+    &:after {
+      @include wave(color(blue, lightest), 80px, 'bottom');
+    }
+  }
 }

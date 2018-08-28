@@ -2,14 +2,18 @@ import * as React from 'react';
 import * as styles from './Card.scss';
 
 interface Props {
-  icon: string;
+  icon: any;
   title: string[];
   content: string;
 }
 
 export default ({icon, title, content}: Props) => (
   <div className={styles.Card}>
-    <img src={icon} alt={icon} className={styles.CardIcon} />
+    <img
+      className={styles.CardIcon}
+      src={icon}
+      alt={title.join('').toLowerCase()}
+    />
     <div className={styles.CardTitle}>
       <span>{title[0]}</span>
       <span>{title[1]}</span>

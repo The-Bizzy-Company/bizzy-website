@@ -1,0 +1,17 @@
+.Cards {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include breakpoint(934px) {
+    justify-content: space-between;
+    margin-top: 160px;
+
+    > :nth-child(even) {
+      margin-top: 80px;
+    }
+
+    > :nth-child(odd) {
+      margin-top: -80px;
+    }
+  }
+}

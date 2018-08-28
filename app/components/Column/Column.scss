@@ -1,0 +1,10 @@
+.Column {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  max-width: 50%;
+}
+
+.SectionBlue {
+  background-color: color(blue, lightest);
+}

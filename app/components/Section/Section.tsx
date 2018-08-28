@@ -6,13 +6,17 @@ import Container from 'Components/Container';
 interface Props {
   children: React.ReactNode;
   background?: string;
+  topWave?: boolean;
+  bottomWave?: boolean;
 }
 
-export default ({children, background}: Props) => (
+export default ({children, background, topWave, bottomWave}: Props) => (
   <div
     className={classNames(
       styles.Section,
       background === 'blue' && styles.SectionBlue,
+      topWave && styles.SectionTopWave,
+      bottomWave && styles.SectionBottomWave,
     )}
   >
     <Container>{children}</Container>
