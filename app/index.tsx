@@ -129,6 +129,19 @@ render(
           ))}
         </Cards>
       </Section>
+      <Section topWave>
+        <Heading>Bizzy's Benefits</Heading>
+        <Cards>
+          {CARDS.map((CARD: any) => (
+            <Card
+              key={getUniqueID()}
+              icon={CARD.icon}
+              title={CARD.title}
+              content={CARD.content}
+            />
+          ))}
+        </Cards>
+      </Section>
     </Page>
   </App>,
   document.getElementById('app'),

@@ -1,3 +1,9 @@
+$wave-height-s: 80px;
+$wave-height-m: 100px;
+$wave-height-l: 120px;
+
+
+
 @mixin wave($color, $height, $side) {
   content: '';
   position: absolute;
@@ -7,18 +13,18 @@
   width: 100%;
   z-index: 100;
 
-  @if($side == 'top') {
+  @if $side == 'top' {
     top: 0;
     right: 0;
     border-radius: 50%/#{$height} #{$height} 0 0;
-    transform: translateY(-50%) translateX(43.5%);
+    transform: translateY(-50%) translateX(43%);
   }
 
-  @if ($side == 'bottom') {
+  @if $side == 'bottom' {
     bottom: 0;
     left: 0;
     border-radius: 50%/#{$height} #{$height} 0 0;
-    transform: translateY(50%) translateX(-43.5%) rotate(180deg);
+    transform: translateY(50%) translateX(-44%) rotate(180deg);
   }
 }
 
@@ -33,13 +39,29 @@
 
   &.SectionTopWave {
     &:before {
-      @include wave(white, 80px, 'top');
+      @include wave(white, $wave-height-s, 'top');
+
+      @include breakpoint($bp-m) {
+        @include wave(white, $wave-height-m, 'top');
+      }
+
+      @include breakpoint($bp-l) {
+        @include wave(white, $wave-height-l, 'top');
+      }
     }
   }
 
   &.SectionBottomWave {
     &:after {
-      @include wave(white, 80px, 'bottom');
+      @include wave(white, $wave-height-s, 'bottom');
+
+      @include breakpoint($bp-m) {
+        @include wave(white, $wave-height-m, 'bottom');
+      }
+
+      @include breakpoint($bp-l) {
+        @include wave(white, $wave-height-l, 'bottom');
+      }
     }
   }
 }
@@ -49,13 +71,29 @@
 
   &.SectionTopWave {
     &:before {
-      @include wave(color(blue, lightest), 80px, 'top');
+      @include wave(color(blue, lightest), $wave-height-s, 'top');
+
+      @include breakpoint(768px) {
+        @include wave(color(blue, lightest), $wave-height-m, 'top');
+      }
+
+      @include breakpoint(1200px) {
+        @include wave(color(blue, lightest), $wave-height-l, 'top');
+      }
     }
   }
 
   &.SectionBottomWave {
     &:after {
-      @include wave(color(blue, lightest), 80px, 'bottom');
+      @include wave(color(blue, lightest), $wave-height-s, 'bottom');
+
+      @include breakpoint(768px) {
+        @include wave(color(blue, lightest), $wave-height-m, 'bottom');
+      }
+
+      @include breakpoint(1200px) {
+        @include wave(color(blue, lightest), $wave-height-l, 'bottom');
+      }
     }
   }
 }

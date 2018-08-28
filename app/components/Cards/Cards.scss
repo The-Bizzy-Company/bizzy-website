@@ -2,7 +2,19 @@
   display: flex;
   flex-wrap: wrap;
 
-  @include breakpoint(934px) {
+  @include breakpoint($bp-s, $bp-l) {
+    flex-direction: column;
+
+    > :nth-child(even) {
+      align-self: flex-end;
+    }
+
+    > :nth-child(odd) {
+      align-self: flex-start;
+    }
+  }
+
+  @include breakpoint($bp-l) {
     justify-content: space-between;
     margin-top: 160px;
 
