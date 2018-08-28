@@ -7,6 +7,8 @@ import Page from 'Components/Page';
 import Stack from 'Components/Stack';
 import Button from 'Components/Button';
 import Card from 'Components/Card';
+import Block from 'Components/Block';
+import Section from 'Components/Section';
 
 const CARDS: any = [
   {
@@ -68,33 +70,39 @@ const CARDS: any = [
 render(
   <App>
     <Page>
-      <Stack vertical>
-        <Heading>Sharing online business cards the easy way.</Heading>
-        <p>
-          Create and customize your digital business card with a website url,
-          add it within our bizzy mobile app to start sharing them with the
-          world.
-        </p>
-        <>
-          <Button url="/get-started">Get started</Button>
-          <Button url="/watch-video" outlined>
-            Watch video
-          </Button>
-        </>
-      </Stack>
-      <Stack vertical>
-        <Heading>Create. Manage. Organise. Structure.</Heading>
-        <p>
-          Create and customize your digital business card with a website url,
-          add it within our bizzy mobile app to start sharing them with the
-          world.
-        </p>
-        <>
-          <Button url="/get-started">Android</Button>
-          <Button url="/watch-video">iPhone</Button>
-        </>
-      </Stack>
-      <Stack vertical>
+      <Section>
+        <Block align="left">
+          <Heading>Sharing online business cards the easy way.</Heading>
+          <p>
+            Create and customize your digital business card with a website url,
+            add it within our bizzy mobile app to start sharing them with the
+            world.
+          </p>
+          <>
+            <Button url="/get-started">Get started</Button>
+            <Button url="/watch-video" outlined>
+              Watch video
+            </Button>
+          </>
+        </Block>
+      </Section>
+
+      <Section background="blue">
+        <Block align="right">
+          <Heading>Create. Manage. Organise. Structure.</Heading>
+          <p>
+            Create and customize your digital business card with a website url,
+            add it within our bizzy mobile app to start sharing them with the
+            world.
+          </p>
+          <>
+            <Button url="/get-started">Android</Button>
+            <Button url="/watch-video">iPhone</Button>
+          </>
+        </Block>
+      </Section>
+
+      <Section>
         <Heading>Bizzy's Benefits</Heading>
         {CARDS.map((CARD: any, index: number) => (
           <Card
@@ -104,7 +112,7 @@ render(
             content={CARD.content}
           />
         ))}
-      </Stack>
+      </Section>
     </Page>
   </App>,
   document.getElementById('app'),

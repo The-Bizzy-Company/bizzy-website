@@ -1,34 +1,36 @@
 $colors: (
-  base: (
-
+  purple: (
+    dark: #29296D,
+    regular: #4545C4,
   ),
   blue: (
-    darker: #4545C4,
+    darker: #2E4981,
     dark: #3360BF,
     regular: #5F94E0,
     light: #CCEAFB,
-    lighter: #E5F4FB
+    lighter: #E5F4FB,
+    lightest: #EFF6FA,
   ),
   brown: (
     dark: #873E25,
     regular: #E28861,
-    light: #EDA27C
+    light: #EDA27C,
   ),
   green: (
     dark: #20CEB1,
     regular: #1BE0BF,
-    light: #40F4D5
+    light: #40F4D5,
   ),
   grey: (
+    dark: #9EAECF,
     regular: #D8DCE5,
-    light: #EFF6FA,
-    lighter: #F5F7FB,
+    light: #F5F7FB,
   ),
   white: (
-    base: #ffffff,
+    regular: #ffffff,
   )
 );
 
-@function color($option, $shade: base) {
+@function color($option, $shade: regular) {
   @return safe-map-get('shade', safe-map-get('color', $colors, $option), $shade);
 }

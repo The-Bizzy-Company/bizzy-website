@@ -9,7 +9,7 @@ interface Props {
 
 export default ({icon, title, content}: Props) => (
   <div className={styles.Card}>
-    <img src={icon} alt={icon} className={styles.CardImage} />
+    <img src={icon} alt={icon} className={styles.CardIcon} />
     <div className={styles.CardTitle}>
       <span>{title[0]}</span>
       <span>{title[1]}</span>
