@@ -1,1 +1,1 @@
-export {default} from 'Components/Section/Section';
+export {default} from './Column';

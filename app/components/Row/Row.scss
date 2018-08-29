@@ -1,0 +1,10 @@
+.Row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+
+  @include breakpoint($bp-m) {
+    flex-direction: row;
+  }
+}

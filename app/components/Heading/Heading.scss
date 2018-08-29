@@ -2,6 +2,28 @@
   font-family: 'Noe Display';
   font-size: size(heading);
   color: color(purple, dark);
+  line-height: 1.4em;
   margin-bottom: 20px;
-  line-height: 1em;
+}
+
+.HeadingSecondary {
+  font-family: 'Brandon Text';
+  font-size: 26px;
+  font-weight: 500;
+  color: color(blue, darker);
+}
+
+.HeadingTertiary {
+  font-family: 'Brandon Text';
+  font-size: 20px;
+  font-weight: 500;
+  color: color(purple, dark);
+}
+
+.HeadingInverted {
+  color: color(white, regular);
+}
+
+.HeadingCentered {
+  text-align: center;
 }

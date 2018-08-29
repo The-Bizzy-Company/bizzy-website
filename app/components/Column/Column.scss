@@ -1,10 +1,9 @@
-.Column {
-  display: flex;
-  flex-basis: 50%;
-  flex-direction: column;
-  max-width: 50%;
+.Column {}
+
+.ColumnLeft {
+  align-self: flex-start;
 }
 
-.SectionBlue {
-  background-color: color(blue, lightest);
+.ColumnRight {
+  align-self: flex-end;
 }

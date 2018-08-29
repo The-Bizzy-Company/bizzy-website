@@ -66,7 +66,7 @@ $wave-height-l: 120px;
   }
 }
 
-.SectionBlue {
+.SectionSea {
   background-color: color(blue, lightest);
 
   &.SectionTopWave {
@@ -93,6 +93,39 @@ $wave-height-l: 120px;
 
       @include breakpoint(1200px) {
         @include wave(color(blue, lightest), $wave-height-l, 'bottom');
+      }
+    }
+  }
+}
+
+.SectionPurple {
+  color: color(white, regular);
+  background-color: color(purple, regular);
+
+  &.SectionTopWave {
+    &:before {
+      @include wave(color(purple, regular), $wave-height-s, 'top');
+
+      @include breakpoint(768px) {
+        @include wave(color(purple, regular), $wave-height-m, 'top');
+      }
+
+      @include breakpoint(1200px) {
+        @include wave(color(purple, regular), $wave-height-l, 'top');
+      }
+    }
+  }
+
+  &.SectionBottomWave {
+    &:after {
+      @include wave(color(purple, regular), $wave-height-s, 'bottom');
+
+      @include breakpoint(768px) {
+        @include wave(color(purple, regular), $wave-height-m, 'bottom');
+      }
+
+      @include breakpoint(1200px) {
+        @include wave(color(purple, regular), $wave-height-l, 'bottom');
       }
     }
   }

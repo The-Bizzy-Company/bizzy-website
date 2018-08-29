@@ -14,7 +14,8 @@ export default ({children, background, topWave, bottomWave}: Props) => (
   <div
     className={classNames(
       styles.Section,
-      background === 'blue' && styles.SectionBlue,
+      background === 'sea' && styles.SectionSea,
+      background === 'purple' && styles.SectionPurple,
       topWave && styles.SectionTopWave,
       bottomWave && styles.SectionBottomWave,
     )}
