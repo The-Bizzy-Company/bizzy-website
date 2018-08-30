@@ -5,9 +5,9 @@
   "author": "Koen Vendrik <k.vendrik@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "webpack-dev-server --hot --inline",
     "build": "webpack",
     "build:prod": "PRODUCTION=y webpack",
-    "serve": "webpack-dev-server --hot --inline",
     "lint": "yarn lint:ts && yarn lint:tslint && yarn lint:eslint",
     "lint:ts": "tsc --noEmit",
     "lint:eslint": "eslint app --ext .tsx --ext .ts",
