@@ -1,7 +1,8 @@
 $spacing: (
   tight: 0.6rem,
   base: .85rem,
-  loose: 1.5rem
+  loose: 1.5rem,
+  looser: 2rem
 );
 
 @function spacing($option: base) {

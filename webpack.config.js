@@ -49,7 +49,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(jpe|jpg|woff|woff2|eot|ttf|svg|otf)(\?.*$|$)/,
+        test: /\.(jpe|jpg|woff|woff2|eot|ttf|svg|png|otf)(\?.*$|$)/,
         loader: 'file-loader',
         options: {
           name: '[path][name].[ext]',

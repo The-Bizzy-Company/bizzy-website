@@ -12,13 +12,14 @@ $sizes: (
   ),
   heading: (
     base: rem(47px),
+    sub: rem(34px)
   ),
 );
 
 $weights: (
   body: (
     base: 300,
-    bold: 400,
+    bold: 500,
   ),
   heading: (
     base: 700,
@@ -31,7 +32,7 @@ $families: (
 );
 
 $line-heights: (
-  body: rem(34px),
+  body: rem(28px),
   heading: 1.3em,
 );
 
