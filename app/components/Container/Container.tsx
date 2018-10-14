@@ -1,6 +1,6 @@
 import * as React from 'react';
-import * as styles from './Container.scss';
 import classNames from 'Utilities/classNames';
+import * as styles from './Container.scss';
 
 interface Props {
   children: React.ReactNode;
@@ -8,10 +8,9 @@ interface Props {
 }
 
 export default ({children, center}: Props) => (
-  <div className={classNames(
-      styles.Container,
-      center && styles.ContainerCenter,
-    )}
-  >{children}</div>
+  <div
+    className={classNames(styles.Container, center && styles.ContainerCenter)}
+  >
+    {children}
+  </div>
 );
-

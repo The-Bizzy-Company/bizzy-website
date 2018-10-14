@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classNames from 'Utilities/classNames';
-import * as styles from './Section.scss';
 import Container from 'Components/Container';
+import * as styles from './Section.scss';
 
 interface Props {
   children: React.ReactNode;
@@ -11,7 +11,13 @@ interface Props {
   centerContent?: boolean;
 }
 
-export default ({children, background, topWave, bottomWave, centerContent}: Props) => (
+export default ({
+  children,
+  background,
+  topWave,
+  bottomWave,
+  centerContent,
+}: Props) => (
   <div
     className={classNames(
       styles.Section,
