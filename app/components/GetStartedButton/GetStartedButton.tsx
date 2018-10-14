@@ -26,7 +26,7 @@ type FormData = FormDetails<Fields>;
 
 class GetStartedButton extends React.Component<{}, State> {
   state = {
-    modalOpen: true,
+    modalOpen: false,
     successModalOpen: false,
   };
 
@@ -94,9 +94,11 @@ class GetStartedButton extends React.Component<{}, State> {
                         {...email}
                       />
                     </Stack.Item>
-                    <Button onClick={submit} disabled={!dirty || !valid}>
-                      Sign up
-                    </Button>
+                    <Stack.Item>
+                      <Button onClick={submit} disabled={!dirty || !valid}>
+                        Sign up
+                      </Button>
+                    </Stack.Item>
                   </>
                 )}
               </FormState>

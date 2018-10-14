@@ -1,9 +1,5 @@
 $animation-speed: .2s;
 
-.TextField {
-  height: 52px;
-}
-
 .Input {
   width: 100%;
 
@@ -61,4 +57,9 @@ $animation-speed: .2s;
     transform: scale(0);
     transition: all $animation-speed ease;
   }
+}
+
+.Error {
+  font-size: 0.95em;
+  color: color(red);
 }

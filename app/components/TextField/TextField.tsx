@@ -13,6 +13,7 @@ export interface Props {
   required?: boolean;
   placeholder?: string;
   onChange(value: string): void;
+  onBlur?(): void;
 }
 
 function getChangeHandler(onChange: Props['onChange']) {
@@ -30,37 +31,44 @@ export default function TextField({
   onChange,
   required,
   placeholder,
+  onBlur,
 }: Props) {
-  console.log(error);
+  const labelMarkup = label && (
+    <label htmlFor={name} className={styles.Label}>
+      {label}
+    </label>
+  );
+  const errorMarkup = error && <div className={styles.Error}>{error}</div>;
+  const fieldMarkup = long ? (
+    <textarea
+      className={styles.Textarea}
+      value={value}
+      name={name}
+      id={id}
+      onChange={getChangeHandler(onChange)}
+      required={required}
+      onBlur={onBlur}
+    />
+  ) : (
+    <input
+      className={styles.Input}
+      type={type}
+      value={value}
+      name={name}
+      id={id}
+      onChange={getChangeHandler(onChange)}
+      required={required}
+      placeholder={placeholder}
+      onBlur={onBlur}
+    />
+  );
+
   return (
-    <div className={styles.TextField}>
-      {label && (
-        <label htmlFor={name} className={styles.Label}>
-          {label}
-        </label>
-      )}
-      {long ? (
-        <textarea
-          className={styles.Textarea}
-          value={value}
-          name={name}
-          id={id}
-          onChange={getChangeHandler(onChange)}
-          required={required}
-        />
-      ) : (
-        <input
-          className={styles.Input}
-          type={type}
-          value={value}
-          name={name}
-          id={id}
-          onChange={getChangeHandler(onChange)}
-          required={required}
-          placeholder={placeholder}
-        />
-      )}
+    <div>
+      {labelMarkup}
+      {fieldMarkup}
       <div className={styles.Underline} />
+      {errorMarkup}
     </div>
   );
 }
