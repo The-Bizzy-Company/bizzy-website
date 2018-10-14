@@ -1,11 +1,12 @@
 .Button {
   display: inline-flex;
+  @include main-font;
   color: color(white);
   background-color: color(purple);
   text-decoration: none;
   transition: background duration() ease;
   border: none;
-  font-size: 20px;
+  font-size: rem(20px);
   font-weight: weight(body, bold);
   padding: spacing() spacing(looser);
   padding-bottom: spacing() + 0.1rem;
@@ -39,4 +40,10 @@
 
 .ButtonSizeSmall {
   padding: spacing(tight) spacing(loose);
+}
+
+.ButtonPlain {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }

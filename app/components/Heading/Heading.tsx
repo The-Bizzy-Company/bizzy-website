@@ -19,6 +19,7 @@ export default ({children, type = 'primary', center, inverted}: Props) => (
       type === 'primary' && styles.HeadingPrimary,
       type === 'secondary' && styles.HeadingSecondary,
       type === 'tertiary' && styles.HeadingTertiary,
+      type === 'sub-section' && styles.HeadingSubSection,
     )}
   >
     {children}

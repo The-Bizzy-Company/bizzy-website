@@ -3,8 +3,6 @@
   font-size: size(heading);
   color: color(purple, dark);
   line-height: rem(58px);
-  margin-bottom: 20px;
-  margin-top: 25px;
 }
 
 .HeadingSecondary {
@@ -19,6 +17,11 @@
   font-size: 20px;
   font-weight: 500;
   color: color(purple, dark);
+}
+
+.HeadingSubSection {
+  font-size: 32px;
+  line-height: 1.2em;
 }
 
 .HeadingInverted {

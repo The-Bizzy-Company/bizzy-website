@@ -2,7 +2,6 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  padding: 100px 0;
 }
 
 .StackVertical {
@@ -20,10 +19,18 @@
   .StackSpacedLoose & {
     margin-right: spacing(loose);
   }
+}
 
-  .StackVertical & {
-    float: none;
-    margin-right: 0;
-    margin-bottom: spacing(tight);
+.StackVertical .Item {
+  float: none;
+  margin-right: 0;
+  margin-bottom: spacing(tight);
+}
+
+.StackVertical.StackSpacedLoose .Item {
+  margin-bottom: spacing(loose);
+
+  &:last-child {
+    margin-bottom: 0 !important;
   }
 }
