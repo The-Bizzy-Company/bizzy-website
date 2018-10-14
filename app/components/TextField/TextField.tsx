@@ -1,99 +1,66 @@
 import * as React from 'react';
-import {Bind} from 'lodash-decorators';
-import classNames from 'Utilities/classNames';
-
+import {bind} from 'lodash-decorators';
 import * as styles from './TextField.scss';
 
 export interface Props {
+  id?: string;
   type?: string;
   value?: string;
   label?: string;
   name?: string;
+  error?: string;
   long?: boolean;
   required?: boolean;
   placeholder?: string;
-  onChange?: (inputEvent: any) => void;
+  onChange(value: string): void;
 }
 
-interface State {
-  value: string;
+function getChangeHandler(onChange: Props['onChange']) {
+  return ({target: {value}}: any) => onChange(value);
 }
 
-export default class TextField extends React.Component<Props, State> {
-  state = {
-    value: this.props.value || '',
-  };
-
-  @Bind()
-  onFieldValueChange(inputEvent: any) {
-    const {onChange} = this.props;
-    const {
-      target: {value},
-    } = inputEvent;
-
-    this.setState({value});
-
-    if (onChange) {
-      onChange(inputEvent);
-    }
-  }
-
-  render() {
-    const {
-      type = 'text',
-      value,
-      label,
-      name,
-      long,
-      required,
-      placeholder,
-    } = this.props;
-    const {value: currentValue} = this.state;
-
-    const labelClassName = classNames(
-      styles.Label,
-      currentValue.length > 0 && styles.LabelActive,
-    );
-
-    const dataProps: any = {};
-    Object.keys(this.props)
-      .filter(key => /^data-/.test(key))
-      .forEach(key => {
-        dataProps[key] = (this.props as any)[key];
-      });
-
-    return (
-      <div className={styles.TextField}>
-        {label && (
-          <label htmlFor={name} className={labelClassName}>
-            {label}
-          </label>
-        )}
-        {long ? (
-          <textarea
-            className={styles.Textarea}
-            defaultValue={value}
-            name={name}
-            id={name}
-            onChange={this.onFieldValueChange}
-            required={required}
-            {...dataProps}
-          />
-        ) : (
-          <input
-            className={styles.Input}
-            type={type}
-            defaultValue={value}
-            name={name}
-            id={name}
-            onChange={this.onFieldValueChange}
-            required={required}
-            placeholder={placeholder}
-            {...dataProps}
-          />
-        )}
-        <div className={styles.Underline} />
-      </div>
-    );
-  }
+export default function TextField({
+  type = 'text',
+  label,
+  name,
+  long,
+  value,
+  id,
+  error,
+  onChange,
+  required,
+  placeholder,
+}: Props) {
+  console.log(error);
+  return (
+    <div className={styles.TextField}>
+      {label && (
+        <label htmlFor={name} className={styles.Label}>
+          {label}
+        </label>
+      )}
+      {long ? (
+        <textarea
+          className={styles.Textarea}
+          value={value}
+          name={name}
+          id={id}
+          onChange={getChangeHandler(onChange)}
+          required={required}
+        />
+      ) : (
+        <input
+          className={styles.Input}
+          type={type}
+          value={value}
+          name={name}
+          id={id}
+          onChange={getChangeHandler(onChange)}
+          required={required}
+          placeholder={placeholder}
+        />
+      )}
+      <div className={styles.Underline} />
+    </div>
+  );
 }

@@ -8,10 +8,19 @@ interface Props {
   plain?: boolean;
   size?: string;
   children: React.ReactNode;
+  disabled?: boolean;
   onClick?(): void;
 }
 
-export default ({url, children, outlined, size, plain, onClick}: Props) => {
+export default ({
+  url,
+  children,
+  outlined,
+  size,
+  plain,
+  onClick,
+  disabled,
+}: Props) => {
   if (plain) {
     return <button className={styles.ButtonPlain}>{children}</button>;
   }
@@ -31,7 +40,7 @@ export default ({url, children, outlined, size, plain, onClick}: Props) => {
     );
   }
   return (
-    <button onClick={onClick} className={className}>
+    <button onClick={onClick} className={className} disabled={disabled}>
       {children}
     </button>
   );

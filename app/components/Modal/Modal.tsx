@@ -8,6 +8,7 @@ import * as styles from './Modal.scss';
 
 interface Action {
   content: string;
+  disabled?: boolean;
   onAction(): void;
 }
 
@@ -15,7 +16,7 @@ interface Props {
   open: boolean;
   title: string;
   children: React.ReactNode;
-  primaryAction: Action;
+  primaryAction?: Action;
   promoImage?: string;
   onClose(): void;
 }
@@ -25,7 +26,7 @@ function Modal({
   title,
   onClose,
   children,
-  primaryAction: {content, onAction},
+  primaryAction,
   promoImage,
 }: Props) {
   const className = classNames(
@@ -34,6 +35,12 @@ function Modal({
     promoImage && open && styles.ModalWide,
   );
   const bodyClassName = classNames(styles.Body, promoImage && styles.BodyPromo);
+
+  const primaryActionMarkup = primaryAction && (
+    <Button onClick={primaryAction.onAction} disabled={primaryAction.disabled}>
+      {primaryAction.content}
+    </Button>
+  );
 
   const contentMarkup = (
     <>
@@ -45,7 +52,7 @@ function Modal({
       <Stack spacing="loose" vertical>
         <Heading type="sub-section">{title}</Heading>
         {children}
-        <Button onClick={onAction}>{content}</Button>
+        {primaryActionMarkup}
       </Stack>
     </>
   );
