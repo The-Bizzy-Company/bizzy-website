@@ -13,7 +13,7 @@ import Benefits from 'Components/Benefits';
 
 render(
   <App>
-    <Page>
+    <Page headless>
       <Section bottomWave centerContent>
         <Row>
           <Column width="420px">
