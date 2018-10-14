@@ -37,6 +37,12 @@ $wave-height-l: 120px;
   padding: 200px 0;
   overflow: visible;
 
+  &:first-child {
+    height: 100vh;
+    min-height: 600px;
+    padding: 0;
+  }
+
   &.SectionTopWave {
     &:before {
       @include wave(white, $wave-height-s, 'top');

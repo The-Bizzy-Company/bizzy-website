@@ -13,7 +13,7 @@ module.exports = {
   mode: process.env.PRODUCTION ? 'production' : 'development',
   devServer: {
     contentBase: __dirname,
-    port: 9000,
+    port: 3000,
     compress: true,
     historyApiFallback: {
       rewrites: [{from: /^\/[^.]+$/, to: '/index.html'}],

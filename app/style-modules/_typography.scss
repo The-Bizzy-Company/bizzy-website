@@ -8,7 +8,7 @@ $size-base: 16px;
 $sizes: (
   body: (
     base: $size-base,
-    big: rem(17.5px),
+    big: rem(19px),
   ),
   heading: (
     base: rem(47px),
@@ -31,7 +31,7 @@ $families: (
 );
 
 $line-heights: (
-  body: 1.5em,
+  body: rem(34px),
   heading: 1.3em,
 );
 

@@ -4,7 +4,8 @@ $border-width: (
 );
 
 $border-radius: (
-  base: rem(3px)
+  base: rem(3px),
+  wide: rem(6px)
 );
 
 @function border-width($width: base) {

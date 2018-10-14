@@ -7,5 +7,9 @@ interface Props {
 }
 
 export default ({children}: Props) => (
-  <div className={classNames(styles.Row)}>{children}</div>
+  <div
+      className={classNames(
+        styles.Row
+      )}
+  >{children}</div>
 );

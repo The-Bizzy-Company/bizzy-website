@@ -8,9 +8,10 @@ interface Props {
   background?: string;
   topWave?: boolean;
   bottomWave?: boolean;
+  centerContent?: boolean;
 }
 
-export default ({children, background, topWave, bottomWave}: Props) => (
+export default ({children, background, topWave, bottomWave, centerContent}: Props) => (
   <div
     className={classNames(
       styles.Section,
@@ -20,6 +21,6 @@ export default ({children, background, topWave, bottomWave}: Props) => (
       bottomWave && styles.SectionBottomWave,
     )}
   >
-    <Container>{children}</Container>
+    <Container center={centerContent}>{children}</Container>
   </div>
 );

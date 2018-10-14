@@ -7,7 +7,7 @@ interface Props {
 
 export default ({children}: Props) => (
   <>
-    <Masthead />
+    {/*<Masthead />*/}
     {children}
   </>
 );

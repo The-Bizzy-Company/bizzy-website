@@ -2,8 +2,9 @@
   font-family: 'Noe Display';
   font-size: size(heading);
   color: color(purple, dark);
-  line-height: 1.4em;
+  line-height: rem(58px);
   margin-bottom: 20px;
+  margin-top: 25px;
 }
 
 .HeadingSecondary {

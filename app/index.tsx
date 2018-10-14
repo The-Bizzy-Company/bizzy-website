@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 
 import App from 'Components/App';
 import Heading from 'Components/Heading';
+import Logo from 'Components/Logo';
 import Page from 'Components/Page';
 import Button from 'Components/Button';
 import Section from 'Components/Section';
@@ -86,21 +87,22 @@ const getUniqueID = createUniqueIDFactory('card');
 render(
   <App>
     <Page>
-      <Section bottomWave>
+      <Section bottomWave centerContent>
         <Row>
           <Column width="420px">
+            <Logo></Logo>
             <Heading>Sharing online business cards the easy way.</Heading>
             <p>
               Create and customize your digital business card with a website
               url, add it within our bizzy mobile app to start sharing them with
               the world.
             </p>
-            <>
+            <div>
               <Button url="/get-started">Get started</Button>
               <Button url="/watch-video" outlined>
                 Watch video
               </Button>
-            </>
+            </div>
           </Column>
         </Row>
       </Section>

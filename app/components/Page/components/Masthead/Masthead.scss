@@ -1,23 +1,14 @@
 .Masthead {
   width: 100%;
-  border-bottom: solid 1px color(grey, regular);
+  border-bottom: solid 1px color(grey);
   overflow: hidden;
 }
 
 .Content {
   width: 100%;
-  height: 70px;
+  height: 93px;
   display: flex;
   align-items: center;
-}
-
-.Logo {
-  height: 40px;
-  float: left;
-
-  img {
-    height: 100%;
-  }
 }
 
 .Nav {
