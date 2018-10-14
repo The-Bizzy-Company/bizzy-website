@@ -30,21 +30,22 @@
     left: 1px;
     bottom: 1px;
     margin: auto;
+    opacity: .6;
     z-index: -1;
   }
 
   &:before {
     left: -10px;
     right: -10px;
-    border-top-color: black;
-    border-bottom-color: black;
+    border-top-color: color(purple, dark);
+    border-bottom-color: color(purple, dark);
   }
 
   &:after {
     top: -10px;
     bottom: -10px;
-    border-left-color: black;
-    border-right-color: black;
+    border-left-color: color(purple, dark);
+    border-right-color: color(purple, dark);
   }
 }
 
