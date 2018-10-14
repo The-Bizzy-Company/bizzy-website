@@ -1,10 +1,15 @@
 .Heading {
   font-family: 'Noe Display';
-  font-size: size(heading);
   color: color(purple, dark);
-  line-height: rem(58px);
+  font-size: rem(37px);
+  line-height: rem(48px);
   margin-bottom: 20px;
   margin-top: 25px;
+
+  @include breakpoint($bp-l) {
+    font-size: rem(47px);
+    line-height: rem(58px);
+  }
 }
 
 .HeadingSecondary {

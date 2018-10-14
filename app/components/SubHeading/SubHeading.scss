@@ -1,9 +1,14 @@
 .Heading {
-  font-size: size(heading, sub);
   color: color(purple, dark);
-  line-height: rem(58px);
+  font-size: rem(28px);
+  line-height: rem(38px);
   margin-bottom: 5px;
   margin-top: 25px;
+
+  @include breakpoint($bp-l) {
+    font-size: size(heading, sub);
+    line-height: rem(58px);
+  }
 }
 
 

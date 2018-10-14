@@ -6,11 +6,16 @@
   transition: background duration() ease;
   border: none;
   font-size: 20px;
+  float: left;
   font-weight: weight(body, bold);
   padding: spacing() spacing(looser);
   padding-bottom: spacing() + 0.1rem;
   border-radius: border-radius(wide);
   cursor: pointer;
+
+  @include breakpoint($bp-l) {
+    float: none;
+  }
 
   &:hover {
     background-color: darken(color(purple), 10%);
@@ -21,7 +26,12 @@
   }
 
   + .Button {
-    margin-left: 20px;
+    margin-top: 15px;
+    clear: left;
+
+    @include breakpoint($bp-l) {
+      margin-left: 20px;
+    }
   }
 }
 

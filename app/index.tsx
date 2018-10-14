@@ -43,10 +43,10 @@ render(
 
       <Section background="sea" topWave bottomWave>
         <Row>
-          <Column width="350px" gutter={200}>
-            <img src={section2Visual} alt="Bizzy" />
+          <Column>
+            <img src={section2Visual} alt="Bizzy" style={{margin: "0 auto", display: "table"}} />
           </Column>
-          <Column width="460px" gutter={100}>
+          <Column>
             <Heading>Going Digital</Heading>
             <SubHeading>Memerable impressions</SubHeading>
             <p style={{fontSize: '19px', lineHeight: '34px', marginBottom: '30px'}}>
@@ -65,7 +65,6 @@ render(
       </Section>
 
       <Section topWave bottomWave>
-        <Heading>Bizzy's Benefits</Heading>
         <Benefits />
       </Section>
 
