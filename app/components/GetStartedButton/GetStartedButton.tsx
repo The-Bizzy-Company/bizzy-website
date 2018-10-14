@@ -41,12 +41,12 @@ class GetStartedButton extends React.Component<{}, State> {
           title="Unlock a free subscription worth $240 yearly."
           promoImage={widget}
         >
-          <Stack vertical>
+          <Stack vertical sectioned spacing="loose">
             Be the first to get a next generation business card. Sign up below
             and be the first to know when we go live. Refer your friends and get
             a one year professional subscription for free for every 10 friends
             that sign up (normally $240 per year).
-            <Stack vertical>
+            <Stack vertical spacing="loose">
               <FormState
                 initialValues={{
                   firstName: '',

@@ -41,7 +41,7 @@ $wave-height-l: 120px;
 
   &:first-child {
     @include breakpoint($bp-l) {
-      height: 100vh;
+      height: 60vh;
       min-height: 600px;
       padding: 0;
     }

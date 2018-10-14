@@ -1,4 +1,4 @@
-$size-base: 16px;
+$size-base: 18px;
 
 @function rem($px) {
   $rem: $px / $size-base;
@@ -32,7 +32,7 @@ $families: (
 );
 
 $line-heights: (
-  body: rem(28px),
+  body: rem(34px),
   heading: 1.3em,
 );
 

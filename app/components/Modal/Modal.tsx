@@ -49,9 +49,9 @@ function Modal({
           <img src={close} alt="Close" />
         </Button>
       </div>
-      <Stack spacing="loose" vertical>
+      <Stack spacing="loose" vertical sectioned>
         <Heading type="sub-section">{title}</Heading>
-        {children}
+        <div>{children}</div>
         {primaryActionMarkup}
       </Stack>
     </>

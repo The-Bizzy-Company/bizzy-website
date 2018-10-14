@@ -3,8 +3,6 @@
   color: color(purple, dark);
   font-size: rem(37px);
   line-height: rem(48px);
-  margin-bottom: 20px;
-  margin-top: 25px;
 
   @include breakpoint($bp-l) {
     font-size: rem(47px);

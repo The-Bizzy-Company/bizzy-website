@@ -14,24 +14,18 @@ function MainHero() {
     <Section bottomWave centerContent>
       <Row>
         <Column width="420px">
-          <Logo />
-          <Heading>Sharing online business cards the easy way.</Heading>
-          <p
-            style={{
-              fontSize: '19px',
-              lineHeight: '34px',
-              marginBottom: '35px',
-            }}
-          >
+          <Stack vertical spacing="loose" sectioned>
+            <Logo />
+            <Heading>Sharing online business cards the easy way.</Heading>
             Create and customize your digital business card with a website url,
             add it within our bizzy mobile app to start sharing them with the
             world.
-          </p>
-          <Stack>
-            <GetStartedButton />
-            <Button url="/watch-video" outlined>
-              Watch video
-            </Button>
+            <Stack sectioned>
+              <GetStartedButton />
+              <Button url="/watch-video" outlined>
+                Watch video
+              </Button>
+            </Stack>
           </Stack>
         </Column>
         <Column width="420px">

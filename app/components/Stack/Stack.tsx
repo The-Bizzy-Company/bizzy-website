@@ -7,6 +7,7 @@ interface Props {
   children: React.ReactNode;
   spacing?: 'loose';
   vertical?: boolean;
+  sectioned?: boolean;
 }
 
 interface ItemProps {
@@ -24,15 +25,16 @@ export default class Stack extends React.Component<Props, never> {
   static Item = Item;
 
   render() {
-    const {vertical, children, spacing} = this.props;
-    const itemMarkup = React.Children.toArray(children).map(
+    const {vertical, children, spacing, sectioned} = this.props;
+    const itemsMarkup = React.Children.toArray(children).map(
       (child: React.ReactNode) => <Item key={getUniqueID()}>{child}</Item>,
     );
+    const childrenMarkup = sectioned ? itemsMarkup : children;
     const className = classNames(
       styles.Stack,
       vertical && styles.StackVertical,
       spacing === 'loose' && styles.StackSpacedLoose,
     );
-    return <div className={className}>{itemMarkup}</div>;
+    return <div className={className}>{childrenMarkup}</div>;
   }
 }

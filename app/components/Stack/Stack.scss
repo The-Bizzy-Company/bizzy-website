@@ -2,13 +2,13 @@
   overflow: hidden;
   display: flex;
   align-items: center;
+
+  &.StackVertical {
+    display: block;
+  }
 }
 
-.StackVertical {
-  display: block;
-}
-
-.Item {
+.Stack > .Item {
   float: left;
   margin-right: spacing();
 
@@ -21,16 +21,16 @@
   }
 }
 
-.StackVertical .Item {
+.StackVertical > .Item {
   float: none;
-  margin-right: 0;
+  margin-right: 0 !important;
   margin-bottom: spacing(tight);
-}
-
-.StackVertical.StackSpacedLoose .Item {
-  margin-bottom: spacing(loose);
 
   &:last-child {
     margin-bottom: 0 !important;
   }
+}
+
+.StackVertical.StackSpacedLoose > .Item {
+  margin-bottom: spacing(loose);
 }
