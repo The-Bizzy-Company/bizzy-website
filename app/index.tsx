@@ -3,93 +3,21 @@ import {render} from 'react-dom';
 import App from 'Components/App';
 import Heading from 'Components/Heading';
 import SubHeading from 'Components/SubHeading';
-import Logo from 'Components/Logo';
 import Page from 'Components/Page';
-import Button from 'Components/Button';
 import Section from 'Components/Section';
 import Column from 'Components/Column';
 import Row from 'Components/Row';
 import Scoreboard from 'Components/Scoreboard';
 import Benefits from 'Components/Benefits';
-import GetStartedButton from 'Components/GetStartedButton';
-
-const section1Visual = require('Assets/sections/section1.svg');
-const section2Visual = require('Assets/sections/section2.png');
+import MainHero from 'Components/MainHero';
+import MainFeatures from 'Components/MainFeatures';
 
 render(
   <App>
     <Page headless>
-      <Section bottomWave centerContent>
-        <Row>
-          <Column width="420px">
-            <Logo />
-            <Heading>Sharing online business cards the easy way.</Heading>
-            <p
-              style={{
-                fontSize: '19px',
-                lineHeight: '34px',
-                marginBottom: '35px',
-              }}
-            >
-              Create and customize your digital business card with a website
-              url, add it within our bizzy mobile app to start sharing them with
-              the world.
-            </p>
-            <div>
-              <GetStartedButton />
-              <Button url="/watch-video" outlined>
-                Watch video
-              </Button>
-            </div>
-          </Column>
-          <Column width="420px">
-            <img src={section1Visual} alt="Bizzy" />
-          </Column>
-        </Row>
-      </Section>
-
-      <Section background="sea" topWave bottomWave>
-        <Row>
-          <Column>
-            <img src={section2Visual} alt="Bizzy" style={{margin: "0 auto", display: "table"}} />
-          </Column>
-          <Column>
-            <Heading>Going Digital</Heading>
-            <SubHeading>Memerable impressions</SubHeading>
-            <p
-              style={{
-                fontSize: '19px',
-                lineHeight: '34px',
-                marginBottom: '30px',
-              }}
-            >
-              Create your next generation business card in just a few click and
-              show what your company does on a new level. Showcase just about
-              anything, from videos to complex animations, anything is possible.
-            </p>
-            <SubHeading>Get insights, increase value</SubHeading>
-            <p
-              style={{
-                fontSize: '19px',
-                lineHeight: '34px',
-                marginBottom: '30px',
-              }}
-            >
-              When receiving Bizzy cards from others you will be able to see all
-              sorts information of which we'll highlight what's important to
-              you. Information you can then use to supercharge your process.
-            </p>
-            {/* <div>
-              <Button url="/get-started">Android</Button>
-              <Button url="/watch-video">iPhone</Button>
-            </div> */}
-          </Column>
-        </Row>
-      </Section>
-
-      <Section topWave bottomWave>
-        <Benefits />
-      </Section>
+      <MainHero />
+      <MainFeatures />
+      <Benefits />
 
       <Section background="sea" topWave bottomWave>
         <Row>

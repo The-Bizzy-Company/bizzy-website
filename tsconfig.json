@@ -17,8 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "Components/*": ["app/components/*"],
-      "Utilities/*": ["app/utilities/*"],
-      "Assets/*": ["app/assets/*"]
+      "Utilities/*": ["app/utilities/*"]
     }
   },
   "exclude": ["node_modules"]
