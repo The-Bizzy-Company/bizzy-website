@@ -2,10 +2,6 @@
   @include main-font;
   line-height: line-height(body);
   color: color(blue, darker);
-
-  @include breakpoint($bp-l) {
-
-  }
 }
 
 :global body {

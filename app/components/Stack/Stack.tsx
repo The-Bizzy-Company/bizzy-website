@@ -21,6 +21,8 @@ function Item({children}: ItemProps) {
 
 // eslint-disable-next-line react/prefer-stateless-function
 export default class Stack extends React.Component<Props, never> {
+  static Item = Item;
+
   render() {
     const {vertical, children, spacing} = this.props;
     const itemMarkup = React.Children.toArray(children).map(

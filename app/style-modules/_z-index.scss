@@ -1,0 +1,8 @@
+$z-index: (
+  base: 1,
+  modal: 999,
+);
+
+@function z-index($variant: base) {
+  @return safe-map-get('z-index', $z-index, $variant);
+}

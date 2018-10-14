@@ -1,17 +1,18 @@
 .Button {
   display: inline-flex;
+  @include main-font;
   color: color(white);
   background-color: color(purple);
   text-decoration: none;
-  transition: background duration() ease;
   border: none;
-  font-size: 20px;
-  float: left;
+  font-size: rem(20px);
   font-weight: weight(body, bold);
   padding: spacing() spacing(looser);
   padding-bottom: spacing() + 0.1rem;
   border-radius: border-radius(wide);
   cursor: pointer;
+  opacity: 1;
+  transition: all duration() ease;
 
   @include breakpoint($bp-l) {
     float: none;
@@ -23,6 +24,12 @@
 
   &:focus {
     outline: none;
+  }
+
+  &[disabled] {
+    opacity: 0.8;
+    pointer-events: none;
+    background-color: color(grey, dark);
   }
 
   + .Button {
@@ -49,4 +56,10 @@
 
 .ButtonSizeSmall {
   padding: spacing(tight) spacing(loose);
+}
+
+.ButtonPlain {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }

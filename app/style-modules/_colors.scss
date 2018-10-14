@@ -22,6 +22,7 @@ $colors: (
     light: #40F4D5,
   ),
   grey: (
+    darkest: #000,
     darker: #696969,
     dark: #9EAECF,
     regular: #D8DCE5,
@@ -29,6 +30,9 @@ $colors: (
   ),
   white: (
     regular: #ffffff,
+  ),
+  red: (
+    regular: rgb(196, 69, 69),
   )
 );
 
