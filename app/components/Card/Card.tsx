@@ -1,13 +1,13 @@
 import * as React from 'react';
 import * as styles from './Card.scss';
 
-interface Props {
-  icon: any;
-  title: string[];
+export interface Card {
+  icon: string;
+  title: [string, string];
   content: string;
 }
 
-export default ({icon, title, content}: Props) => (
+export default ({icon, title, content}: Card) => (
   <div className={styles.Card}>
     <img
       className={styles.CardIcon}
