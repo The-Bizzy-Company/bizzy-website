@@ -1,0 +1,16 @@
+.Modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(color(grey, darkest), 0.8);
+  z-index: z-index(modal);
+}
+
+.Body {
+  width: 100%;
+  max-width: 600px;
+  background: color(white);
+  border-radius: border-radius(extra-extra-wide);
+}

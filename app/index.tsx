@@ -10,9 +10,11 @@ import Column from 'Components/Column';
 import Row from 'Components/Row';
 import Scoreboard from 'Components/Scoreboard';
 import Benefits from 'Components/Benefits';
+import Modal from 'Components/Modal';
 
 render(
   <App>
+    <Modal open title="Unlock a free subscription worth $240 yearly." />
     <Page headless>
       <Section bottomWave centerContent>
         <Row>
