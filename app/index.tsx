@@ -2,7 +2,6 @@ import * as React from 'react';
 import {render} from 'react-dom';
 import App from 'Components/App';
 import Heading from 'Components/Heading';
-import SubHeading from 'Components/SubHeading';
 import Page from 'Components/Page';
 import Section from 'Components/Section';
 import Column from 'Components/Column';
