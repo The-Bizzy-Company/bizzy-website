@@ -6,7 +6,7 @@ const {TsConfigPathsPlugin} = require('awesome-typescript-loader');
 const PATHS = {
   app: `${__dirname}/app`,
   public: `${__dirname}/public`,
-  rootPublic: '/public',
+  rootPublic: '/public/',
 };
 
 module.exports = {
